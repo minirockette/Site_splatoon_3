@@ -1,0 +1,286 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.918)), url('Image/Fond_encres_bicolore.jpg');
+    background-size: cover;
+}
+
+.body_mode{
+    background: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.582)), url('Image/Fond_sticker.jpg');
+    background-size: cover;
+}
+
+.body_histoire{
+    background-image: url('Image/Alterna.jpg');
+    background-size: cover;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-family: "Splatoon3", sans-serif;
+    color: azure;
+    font-size: 80px;
+    text-shadow: 2px 2px 5px rgb(94, 109, 54);
+}
+
+h2{
+    font-family: "Splatoon3_gras", sans-serif;
+    color: white;
+    margin: 40px;
+    font-size: 50px;
+}
+
+p{
+    font-family: "Splatoon3";
+    color: white;
+    margin: 40px;
+    font-size: 45px;
+}
+
+span{
+    font-family: "Splatoon3_gras";
+}
+
+.border{
+    border: 15px solid transparent;
+    border-image: url(Image/Fond_écran.jpg) 30;
+    flex: 1;
+    height: 600px;
+}
+
+.image_taille{
+    width: 500px;
+    height: auto;
+}
+
+.border:hover{
+    opacity: 85%;
+}
+
+.fond_rouge{
+    background-color:#c03e3e ;
+}
+
+.fond_jaune{
+    background-color: #beb013;
+}
+
+.fond_bleu{
+    background-color: #413bba;
+}
+
+img{
+    width: 600px;
+}
+
+.decor-image{
+    position: fixed;
+    pointer-events: none;
+    background-repeat: repeat-y;
+    background-size: 40px auto;
+    z-index: 1000;
+    top: 0;
+    width: 20vw;
+    height: 100vh;
+}
+
+.image-gauche{
+    left: 0;
+    background-image: url(Image/stickers_vertical.png);
+    background-position: top left;
+    animation: defilement-haut 40s linear infinite;
+}
+
+.image-droite{
+    right: 0;
+    background-image:url(Image/stickers_vertical_droite.png);
+    background-position: top right;
+    animation: defilement-bas 40s linear infinite;
+    display: flex;
+    justify-content: end;
+}
+
+.lien_vers_les_pages{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-items: stretch;
+}
+
+.lien-image{
+    display: grid;
+    text-decoration: none;
+}
+
+.lien-image ,.texte-sur-image{
+  grid-area: 1 / 1;
+}
+
+.texte-sur-image{
+    z-index: 10;
+    align-self: center;
+    justify-self: center;
+    color: azure;
+    font-size: 40px;
+}
+
+.a_l_envers{
+    transform: scaleX(-1);
+}
+
+.texte-ombre{
+    text-shadow: 2px 2px 5px var(--couleur-ombre, black);
+}
+
+.video-iframe {
+    float: right;          
+    width: 550px;         
+    height: 300px; 
+    margin-right: 10px;  
+    margin-top: 50px;  
+}
+
+.classique{
+    background-color: #91cc01;
+    background-size: cover;
+    border: 20px solid transparent;
+    border-color: #6a9206;
+}
+
+.logo_classique{
+    width: 150px;
+    height: auto;
+    margin-right: 60px;
+    margin-top: 10px;
+    justify-content: flex-start;
+}
+
+.anarchie{
+    background-color: #f97800;
+    background-size: cover;
+    border: 20px solid transparent;
+    border-color: #ba5a00;
+}
+
+.challenge{
+    background-color: #f02d7d;
+    background-size: cover;
+    border: 20px solid transparent;
+    border-color: #861745;
+}
+
+.salmon_run{
+    background-color: #ff5b00;
+    background-size: cover;
+    border: 20px solid transparent;
+    border-color: #065006;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.carte-conteneur{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.image_carte{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.bouton_taille{
+    width:20vw;
+    height: auto;
+}
+
+.square{
+    width: 14vw;
+    height: auto;
+}
+
+.bouton{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texte_magasin{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    background-color: black;
+    border: 15px solid black;
+    border-radius: 20px;
+}
+
+.nom_magasin{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+
+}
+
+.bouton:hover{
+    transform: translate(-50%,-50%) scale(1.2);
+}
+
+
+
+@font-face {
+    font-family: "Splatoon3";
+    src: url("Fonts/BlitzMain.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Splatoon3_gras";
+    src: url("Fonts/BlitzBold.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Splatoon3_K";
+    src: url("Fonts/AsiaKCUBE-R.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes defilement-haut{
+    from{
+        background-position-y:0;
+    }
+    to{
+        background-position-y: -490px;
+    }
+}
+
+@keyframes defilement-bas{
+    from{
+        background-position-y:0;
+    }
+    to{
+        background-position-y: 490px;
+    }
+}
